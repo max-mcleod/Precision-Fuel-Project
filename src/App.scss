@@ -1,0 +1,153 @@
+.App {
+  text-align: center;
+  font-family: Poppins;
+  background-color: #f1f2f6;
+  line-height: 1.6;
+}
+
+.container {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 1260px;
+  width: 100%;
+  max-width: 1260px;
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  padding: 0px 1.2rem;
+  &.padded {
+    padding: 0px 1.2rem 30px;
+    @media screen and (min-width: 64em) {
+      flex-direction: row;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  .breadcrumb {
+    display: block;
+    font-size: 13px;
+    padding: 20px 0px;
+    .bar {
+      padding: 0px 5px;
+    }
+  }
+  .image-wrapper {
+    margin-right: auto;
+    flex-grow: 0;
+    display: block;
+  }
+  .wrapper {
+    width: 100%;
+    max-width: 600px;
+    @media screen and (min-width: 64em) {
+      padding: 0px 1.2rem;
+    }
+  }
+  h1 {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 36px;
+    margin: 0;
+  }
+  .feature {
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: normal;
+    color: #666;
+  }
+  img {
+    width: 100%;
+    max-width: 500px;
+  }
+  .label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  .button {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    text-align: center;
+    line-height: 16px;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    font-size: inherit;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 0;
+    border-radius: 4px;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 12px;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: 2px solid;
+    padding-left: 20px;
+    padding-right: 20px;
+    letter-spacing: 0px;
+    padding: 6px 14px;
+    color: #d4d4d4;
+    border-radius: 30px;
+    border-color: #d4d4d4;
+    background-color: transparent;
+    margin-right: 5px;
+    &.outlined {
+      border-color: #1d1d1f;
+      color: #1d1d1f;
+    }
+    &.black {
+      background-color: #1d1d1f;
+      border-color: #1d1d1f;
+      color: #fff;
+    }
+    &.add-to-cart {
+      width: 100%;
+      padding: 12px 14px;
+      font-size: 15px;
+    }
+    &.qcc {
+      background-color: #fff;
+      border-color: #fff;
+      color: #1d1d1f;
+      width: 100%;
+      padding: 10px 14px;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+    &.subscribe {
+      color: #c4d600;
+      border-color: transparent;
+      background: transparent;
+      width: 100%;
+      padding: 10px 14px;
+      margin-top: 10px;
+    }
+  }
+  .price-row {
+    margin-top: 20px;
+    .price {
+      font-size: 21px;
+    }
+    .stars {
+      color: #666;
+      margin-bottom: 20px;
+    }
+  }
+  .warehouse {
+    font-size: 15px;
+    font-weight: 400;
+    font-style: normal;
+    font-style: italic;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 8px;
+  }
+}
