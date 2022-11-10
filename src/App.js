@@ -1,18 +1,23 @@
-import React from "react";
-import { Flex, Box, Button, Heading, Text } from "rebass";
+import React, { useCallback, useState } from "react";
+import { Flex, Box, Button, Text } from "rebass";
 import BsArrowRepeat from "@meronex/icons/bs/BsArrowRepeat";
 import BsStarFill from "@meronex/icons/bs/BsStarFill";
 import FiCheck from "@meronex/icons/fi/FiCheck";
 import IosCalculator from "@meronex/icons/ios/IosCalculator";
 import RiShoppingCartFill from "@meronex/icons/ri/RiShoppingCartFill";
+import ProductDescriptionSection from "./components/ProductDescriptionSection";
 
 import Header from "./Header";
 import Footer from "./Footer";
 import "./App.scss";
-import gel from "./assets/PF30Gel-1.png";
+import gel from "./assets/images/PF30Gel-1.png";
+import bowden from "./assets/images/adam-bowden.webp";
+import calc from "./assets/images/calc.svg";
+import gf from "./assets/images/gf.svg";
+import informed from "./assets/images/informed.svg";
+import vegan from "./assets/images/vegan.svg";
+import natural from "./assets/images/natural.svg";
 
-import "@fontsource/poppins/400.css";
-import "@fontsource/poppins/500.css";
 import "@fontsource/poppins/600.css";
 import "@fontsource/poppins/700.css";
 import "@fontsource/poppins/800.css";
@@ -27,6 +32,11 @@ const Stars = () => {
 };
 
 function App() {
+  const [show, setShow] = useState(false);
+  const toggleShow = useCallback(() => {
+    setShow((show) => !show);
+  }, []);
+
   return (
     <Box className="App">
       <Header />
@@ -110,6 +120,187 @@ function App() {
                 Subscribe & save
               </Flex>
             </Button>
+          </Flex>
+        </Box>
+      </Box>
+      <Box sx={{ height: 80, bg: "#420a98" }}></Box>
+      <Box bg="#fff">
+        <Box
+          className="container padded"
+          sx={{ maxWidth: 1360, margin: "0 auto" }}
+        >
+          <Flex className="desc-flex-wrapper">
+            <Box className="text-block">
+              <Text as="h2">
+                Precision{` `}
+                <Box as="span" sx={{ color: "#c4d600" }}>
+                  Fuel
+                </Box>
+              </Text>
+              <Text>
+                <p>
+                  Our{" "}
+                  <u>
+                    <b>Quick Carb Calculator™</b>
+                  </u>{" "}
+                  helps you understand{" "}
+                  <u>
+                    <b>how much fuel you need</b>
+                  </u>{" "}
+                  to perform at your best.
+                </p>
+                <p>
+                  Our range of fuel makes it easy to hit those numbers by
+                  telling you how much carbohydrate is in each serving right on
+                  the front of the packaging. No complicated nutritional tables
+                  to decipher, zero guesswork.
+                </p>
+                <p>
+                  The all-natural PF 30 Gel can be used on its own during
+                  shorter durations, or combined with other PF fueling products
+                  or real foods when going longer. If you're someone who hasn't
+                  gotten on well with gels previously, give ours a try, we'll
+                  eat a flip-flop if you're not pleasantly surprised!
+                </p>
+              </Text>
+              <Flex className="icons-wrap">
+                <Box className="icon-box">
+                  <img src={informed} className="icon" />
+                  Informed Sport certified
+                </Box>
+                <Box className="icon-box">
+                  <img src={natural} className="icon" />
+                  All-natural (no artificial ingredients)
+                </Box>
+                <Box className="icon-box">
+                  <img src={calc} className="icon" />
+                  Use the Carb Calculator to nail your fueling strategy
+                </Box>
+                <Box className="icon-box">
+                  <img src={gf} className="icon" />
+                  2:1 glucose to fructose ratio to aid carbohydrate uptake
+                </Box>
+                <Box className="icon-box">
+                  <img src={vegan} className="icon" />
+                  Vegan
+                </Box>
+              </Flex>
+            </Box>
+            <Box className="athlete-quote" sx={{ width: "50%" }}>
+              <img src={bowden} className="bowden" />
+              <Box className="quote-text">
+                "The PF 30 Gels are awesome! They're easy to consume on the bike
+                and run, taste great and have a good consistency. With the PF
+                range, I really feel like I'm able to get in the fuel I need
+                much more effectively than in the past."
+              </Box>
+              <Box className="quote-author">
+                Adam Bowden - IRONMAN 70.3 Dubai winner
+              </Box>
+            </Box>
+          </Flex>
+        </Box>
+      </Box>
+      <Box sx={{ bg: "#fff" }}>
+        <Box
+          className="container padded"
+          sx={{ maxWidth: 1360, margin: "0 auto" }}
+        >
+          <Flex width={"100%"} sx={{ flexDirection: "column" }}>
+            <ProductDescriptionSection
+              title={"Key Features"}
+              body={
+                <>
+                  <ul>
+                    <li>
+                      Designed to help you start and stay fueled during efforts
+                      lasting more than about 60 minutes
+                    </li>
+                    <li>Contains 30g of carbohydrate per serving</li>
+                    <li>
+                      Does not contain electrolytes, as they're designed to be
+                      used alongside our Precision Hydration range
+                    </li>
+                    <li>
+                      Typically used on its own during shorter efforts, or
+                      combined with other Precision Fuel products, or real
+                      foods, when going longer
+                    </li>
+                    <li>
+                      Use the{" "}
+                      <a href="https://www.precisionhydration.com/products/pf-30-gel/#thecarbcalculator">
+                        Quick Carb Calculator™
+                      </a>{" "}
+                      to understand your fueling needs
+                    </li>
+                    <li>
+                      2:1 glucose to fructose ratio to aid carbohydrate uptake
+                    </li>
+                    <li>Informed Sport certified</li>
+                    <li>
+                      Mild, neutral 'Original' flavour to reduce flavour fatigue
+                    </li>
+                    <li>No artificial ingredients</li>
+                    <li>Vegan</li>
+                    <li>Does not contain caffeine</li>
+                  </ul>
+                </>
+              }
+              key={1}
+            />
+            <ProductDescriptionSection
+              title={"Directions"}
+              body={
+                <>
+                  <p>
+                    Tear open and squeeze the gel into your mouth in stages. Oh,
+                    and don't be a numpty, dispose of the empty packet
+                    responsibly...
+                  </p>
+                  <p>
+                    Use the Quick Carb Calculator™ to understand how much fuel
+                    you need to perform at your best.
+                  </p>
+                  <p>
+                    Store in a cool, dry place, out of the reach of young
+                    children.
+                  </p>
+                  <p>
+                    This product is a food supplement. Do not use as a
+                    substitute for a varied diet.
+                  </p>
+                </>
+              }
+              key={2}
+            />
+            <ProductDescriptionSection
+              title={"Nutritional Information"}
+              body={
+                <>
+                  <p>
+                    {`Energy: 120 Kcal / 512 Kj per 51g gel (236 Kcal / 1003 Kj per 100g)`}
+                    <br />
+                    {`Protein: < 0.1g per 51g gel (< 0.1g per 100g)`}
+                    <br />
+                    {`Fats: < 0.1g per 51g gel (< 0.1g per 100g)`}
+                    <br />
+                    {`Carbohydrates: 30g per 51g gel (59g per 100g)`}
+                  </p>
+                </>
+              }
+              key={3}
+            />
+            <ProductDescriptionSection
+              title={"Ingredients"}
+              body={
+                <p>
+                  `Maltodextrin, Water, Fructose, Pectin, Acidity Regulator
+                  (Citric Acid), Preservatives (Potassium Sorbate, Calcium
+                  Lactate).`
+                </p>
+              }
+              key={4}
+            />
           </Flex>
         </Box>
       </Box>

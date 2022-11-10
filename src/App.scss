@@ -1,7 +1,64 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
 .App {
   text-align: center;
   font-family: Poppins;
   background-color: #f1f2f6;
+}
+p {
+  line-height: 1.6;
+  color: #666;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+  font-family: Poppins;
+  color: #101010;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 0;
+}
+h2 {
+  font-size: 32px;
+  @media all and (min-width: 64em) {
+    font-size: 50px;
+  }
+}
+
+h4 {
+  font-size: 24px;
+}
+
+b,
+u {
+  font-weight: 500;
+  color: #101010;
+}
+
+img {
+  display: block;
+  height: auto;
+}
+
+ul {
+  color: #666;
+  font-size: 15px;
+  list-style: disc;
+  padding-inline-start: 20px;
   line-height: 1.6;
 }
 
@@ -17,8 +74,8 @@
   flex-direction: column;
   padding: 0px 1.2rem;
   &.padded {
-    padding: 0px 1.2rem 30px;
-    @media screen and (min-width: 64em) {
+    padding: 30px 1.2rem;
+    @media all and (min-width: 64em) {
       flex-direction: row;
       padding-left: 2rem;
       padding-right: 2rem;
@@ -36,6 +93,9 @@
     margin-right: auto;
     flex-grow: 0;
     display: block;
+    img {
+      max-width: 500px;
+    }
   }
   .wrapper {
     width: 100%;
@@ -44,22 +104,12 @@
       padding: 0px 1.2rem;
     }
   }
-  h1 {
-    font-family: Poppins;
-    font-weight: 600;
-    font-size: 36px;
-    margin: 0;
-  }
   .feature {
     font-family: "Helvetica Neue", "Helvetica", sans-serif;
     font-size: 15px;
     font-weight: 400;
     font-style: normal;
     color: #666;
-  }
-  img {
-    width: 100%;
-    max-width: 500px;
   }
   .label {
     font-size: 14px;
@@ -149,5 +199,61 @@
     font-size: 12px;
     color: #666;
     margin-bottom: 8px;
+  }
+}
+
+.desc-flex-wrapper {
+    flex-direction: column;
+    @media all and (min-width: 64em) {
+    flex-direction: row;
+
+  }
+  .icons-wrap {
+    flex-wrap: wrap;
+    .icon-box {
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      width: 50%;
+      margin-bottom: 20px;
+      color: #101010;
+      .icon {
+        width: 60px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .bowden {
+    max-width: 650px;
+    width: 100%;
+    height: auto;
+    align-self: baseline;
+  }
+  .text-block {
+    padding-right: 30px;
+    color: #666;
+  }
+  .athlete-quote {
+    color: #999;
+    font-size: 22px;
+    .quote-text {
+      margin: 20px 0px;
+    }
+    .quote-author {
+      font-size: 15px;
+      font-style: italic;
+    }
+  }
+}
+
+.product-description-dropdown-wrapper {
+  flex-direction: column;
+  border-bottom: 1px solid rgb(233, 233, 233);
+  width: 100%;
+  .product-description-dropdown-item {
+    padding: 30px 0px;
+  }
+  .product-description-dropdown-content {
+    padding-bottom: 20px;
   }
 }
