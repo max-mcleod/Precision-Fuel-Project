@@ -186,7 +186,7 @@ function App() {
                 </Box>
               </Flex>
             </Box>
-            <Box className="athlete-quote" sx={{ width: "50%" }}>
+            <Box className="athlete-quote">
               <img src={bowden} className="bowden" />
               <Box className="quote-text">
                 "The PF 30 Gels are awesome! They're easy to consume on the bike

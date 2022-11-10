@@ -4,7 +4,7 @@ import PFHLogoWhite from "./assets/PFHLogoWhite";
 
 const Header = () => {
   return (
-    <Box px={4} sx={{ bg: "#101010" }}>
+    <Box px={[3,4]} sx={{ bg: "#101010" }}>
       <Flex className="logo-image" py={"10px"}>
         <PFHLogoWhite height="40" />
       </Flex>

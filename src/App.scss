@@ -203,10 +203,9 @@ ul {
 }
 
 .desc-flex-wrapper {
-    flex-direction: column;
-    @media all and (min-width: 64em) {
+  flex-direction: column;
+  @media all and (min-width: 64em) {
     flex-direction: row;
-
   }
   .icons-wrap {
     flex-wrap: wrap;
@@ -232,10 +231,12 @@ ul {
   .text-block {
     padding-right: 30px;
     color: #666;
+    flex-basis: 50%;
   }
   .athlete-quote {
     color: #999;
     font-size: 22px;
+    flex-basis: 50%;
     .quote-text {
       margin: 20px 0px;
     }
