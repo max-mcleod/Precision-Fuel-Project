@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React from "react";
 import { Flex, Box, Button, Text } from "rebass";
 import BsArrowRepeat from "@meronex/icons/bs/BsArrowRepeat";
 import BsStarFill from "@meronex/icons/bs/BsStarFill";
@@ -32,11 +32,6 @@ const Stars = () => {
 };
 
 function App() {
-  const [show, setShow] = useState(false);
-  const toggleShow = useCallback(() => {
-    setShow((show) => !show);
-  }, []);
-
   return (
     <Box className="App">
       <Header />
@@ -48,7 +43,7 @@ function App() {
       </Box>
       <Box className="container padded" sx={{ margin: "0 auto" }}>
         <Flex className="image-wrapper">
-          <img src={gel} />
+          <img src={gel} alt="PF 30 Gel" />
         </Flex>
         <Box className="wrapper">
           <h1>PF 30 Gel</h1>
@@ -165,29 +160,33 @@ function App() {
               </Text>
               <Flex className="icons-wrap">
                 <Box className="icon-box">
-                  <img src={informed} className="icon" />
+                  <img src={informed} className="icon" alt="Informed Sport" />
                   Informed Sport certified
                 </Box>
                 <Box className="icon-box">
-                  <img src={natural} className="icon" />
+                  <img
+                    src={natural}
+                    className="icon"
+                    alt="Natural Ingredients"
+                  />
                   All-natural (no artificial ingredients)
                 </Box>
                 <Box className="icon-box">
-                  <img src={calc} className="icon" />
+                  <img src={calc} className="icon" alt="QCC" />
                   Use the Carb Calculator to nail your fueling strategy
                 </Box>
                 <Box className="icon-box">
-                  <img src={gf} className="icon" />
+                  <img src={gf} className="icon" alt="2:1 Glucose Fructose" />
                   2:1 glucose to fructose ratio to aid carbohydrate uptake
                 </Box>
                 <Box className="icon-box">
-                  <img src={vegan} className="icon" />
+                  <img src={vegan} className="icon" alt="Vegan" />
                   Vegan
                 </Box>
               </Flex>
             </Box>
             <Box className="athlete-quote">
-              <img src={bowden} className="bowden" />
+              <img src={bowden} className="bowden" alt="Adam Bowden"/>
               <Box className="quote-text">
                 "The PF 30 Gels are awesome! They're easy to consume on the bike
                 and run, taste great and have a good consistency. With the PF
