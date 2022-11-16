@@ -10,17 +10,26 @@ import ProductDescriptionSection from "./components/ProductDescriptionSection";
 import Header from "./Header";
 import Footer from "./Footer";
 import "./App.scss";
+import leaf from "./assets/images/leaf-solid.svg"
+import cow from "./assets/images/cow-solid.svg"
+import wheat from "./assets/images/wheat-awn-solid.svg"
+import recycle from "./assets/images/recycle-seven.svg"
 import gel from "./assets/images/PF30Gel-1.png";
 import bowden from "./assets/images/adam-bowden.webp";
 import calc from "./assets/images/calc.svg";
 import gf from "./assets/images/gf.svg";
 import informed from "./assets/images/informed.svg";
+import informedSmall from "./assets/images/informed-small.svg"
 import vegan from "./assets/images/vegan.svg";
 import natural from "./assets/images/natural.svg";
 
 import "@fontsource/poppins/600.css";
 import "@fontsource/poppins/700.css";
 import "@fontsource/poppins/800.css";
+
+import Icon from "./components/Icon";
+import IconToolTip from "./components/IconToolTip"
+
 
 const Stars = () => {
   const stars = 5;
@@ -63,6 +72,23 @@ function App() {
               The texture is designed to reduce stickiness in the mouth and
               minimise the need to wash them down with fluid immediately.
             </p>
+          </Box>
+          {/* Box to contain content */}
+          <Box mb={15} className="container-purple">
+            {/* Flex to display elements inline */}
+            <Flex>
+              {/* Component made to minimise re-used code */}
+              <Icon src={leaf} iconClass='white-icon header-icon' iconTitle='icon-title' tag='Vegan' />
+              <Icon src={cow} iconClass='white-icon header-icon' iconTitle='icon-title' tag='Dairy Free' />
+              <Icon src={wheat} iconClass='white-icon header-icon' iconTitle='icon-title' tag='Gluten Free' />
+            </Flex>
+          </Box>
+          {/* Secondary container for additional content */}
+          <Box ml={20} className='container-purple'>
+            <Flex>
+              <IconToolTip src={recycle} iconClass='header-icon' iconTitle='icon-title' tag='Recycle-7' />
+              <IconToolTip src={informedSmall} iconClass='header-icon' iconTitle='icon-title' tag='Certified' />
+            </Flex>
           </Box>
           <Box className="label">Product</Box>
           <Box mb={3}>
@@ -186,7 +212,7 @@ function App() {
               </Flex>
             </Box>
             <Box className="athlete-quote">
-              <img src={bowden} className="bowden" alt="Adam Bowden"/>
+              <img src={bowden} className="bowden" alt="Adam Bowden" />
               <Box className="quote-text">
                 "The PF 30 Gels are awesome! They're easy to consume on the bike
                 and run, taste great and have a good consistency. With the PF
@@ -257,6 +283,13 @@ function App() {
                     responsibly...
                   </p>
                   <p>
+                    For recycling directions, plastic number 7 is any type of
+                    plastic that's sometimes recyclable and sometimes not.
+                    It usually contains multiple plastics, some of which aren't
+                    recyclable. Those with the “PLA” initials or the word
+                    “compostable” near the recycling symbol are recyclable.
+                  </p>
+                  <p>
                     Use the Quick Carb Calculator™ to understand how much fuel
                     you need to perform at your best.
                   </p>
@@ -284,6 +317,13 @@ function App() {
                     {`Fats: < 0.1g per 51g gel (< 0.1g per 100g)`}
                     <br />
                     {`Carbohydrates: 30g per 51g gel (59g per 100g)`}
+                  </p>
+                  <p>
+                    Allergen information:
+                    <br />
+                    Gluten Free, Dairy Free, Wheat Free, Egg Free, Fish Free,
+                    Crustacean Free, Mollusc Free, Nut Free, Sesame Free,
+                    Celery Free, Mustard Free and GMO Free.
                   </p>
                 </>
               }
